@@ -19,7 +19,7 @@ A web application built with Flask and LangChain to chat with local documents (P
     - On macOS:
       - Poppler: `brew install poppler`
       - Tesseract: `brew install tesseract`
-  * Ollama: Installed and running with the `llama3.1` model pulled (`ollama pull llama3.1`)
+  * Ollama: Installed and running with the model of your choice pulled (I used llama3.2)
 
 - Installation
   1. Clone the Repository:
@@ -56,14 +56,14 @@ document-chat-app/
 
 - Usage
 1. Add Documents:
-* Place your documents (e.g., `EmploymentContract.pdf`) in the `documents/` folder.
+* Place your documents (e.g., `Ts_Cs.pdf`) in the `documents/` folder.
 2. Run the App:
     python app.py
     * The app runs on `http://localhost:5001`.
 
 3. Access the Web Interface:
     * Open `http://localhost:5001` in your browser.
-    * Type a query (e.g., "What are the terms and conditions of my employment?") and press Enter or click Send.
+    * Type a query (e.g., "What are the terms and conditions of the agreement?") and press Enter or click Send.
 
 4. API Usage:
      Query via curl:
