@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WKB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask me questions</h1>
+        <div id="chat-box"></div>
+        <textarea id="query" placeholder="Ask a question..."></textarea>
+        <button onclick="sendQuery()">Send</button>
+    </div>
+
+    <script>
+        async function sendQuery() {
+            const query = document.getElementById("query").value;
+            if (!query) return;
+
+            const chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += `<p><strong>You:</strong> ${query}</p>`;
+
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query })
+            });
+            const data = await response.json();
+
+            chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+            document.getElementById("query").value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        document.getElementById("query").addEventListener("keypress", (e) => {
+            if (e.key === "Enter") sendQuery();
+        });
+    </script>
+</body>
+</html>
