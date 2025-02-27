@@ -1,6 +1,6 @@
 Document Chat App
 
-A web application built with Flask and LangChain to chat with local documents (PDFs, CSVs, Excel files), including support for image-based PDFs via OCR. Powered by Ollama's Llama 3.1 model, it allows users to query document content through a simple interface.
+A web application built with Flask and LangChain to chat with local documents (PDFs, CSVs, Excel files), including support for image-based PDFs via OCR. Powered by Ollama's any available or preferred model of your choice  (I used llama3.2), it allows users to query document content through a simple interface.
 
 - Features
   * Supported File Types: PDFs (text and image-based), CSVs, Excel (.xlsx, .xls)
