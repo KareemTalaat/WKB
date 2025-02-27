@@ -1,0 +1,14 @@
+flask>=3.0.3                # Web framework for the app
+langchain>=0.2.0            # Core LangChain library
+langchain-community>=0.2.0  # Community extensions for document loaders
+langchain-huggingface>=0.0.3  # Updated embeddings package (replaces langchain_community.embeddings)
+langchain-chroma>=0.1.2     # Updated vector store package (replaces langchain_community.vectorstores)
+langchain-ollama>=0.1.1     # Updated Ollama LLM package (replaces langchain_community.llms)
+pypdf>=4.0.0                # PDF text extraction
+pytesseract>=0.3.10         # OCR for image-based PDFs
+pdf2image>=1.17.0           # Converts PDFs to images for OCR
+pillow>=10.0.0              # Image processing for OCR
+pandas>=2.2.2               # CSV and Excel file handling
+numpy>=1.26.4               # Numerical operations
+sentence-transformers>=2.7.0  # Embedding models (e.g., all-mpnet-base-v2)
+chromadb>=0.5.0             # Backend for Chroma vector store
